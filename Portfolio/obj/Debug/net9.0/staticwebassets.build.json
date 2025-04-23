@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "VLPKvOqWorT/Ysp2ttSjq2Yn40dtU+HaKy0H7VMvkzw=",
+  "Source": "Portfolio",
+  "BasePath": "_content/Portfolio",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Portfolio\\wwwroot",
+      "Source": "Portfolio",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\fashion-portfolio\\Portfolio\\wwwroot\\",
+      "BasePath": "_content/Portfolio",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\fashion-portfolio\\Portfolio\\wwwroot\\images\\image_1.jpg",
+      "SourceId": "Portfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\fashion-portfolio\\Portfolio\\wwwroot\\",
+      "BasePath": "_content/Portfolio",
+      "RelativePath": "images/image_1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8vub87vhxk",
+      "Integrity": "BCWmubD7IjEDAE1b23FEthi6uLBulmEnhwbtK6c/Fdc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\image_1.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/image_1.8vub87vhxk.jpg",
+      "AssetFile": "C:\\Users\\user\\Desktop\\fashion-portfolio\\Portfolio\\wwwroot\\images\\image_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "190464"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BCWmubD7IjEDAE1b23FEthi6uLBulmEnhwbtK6c/Fdc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 21:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8vub87vhxk"
+        },
+        {
+          "Name": "label",
+          "Value": "images/image_1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BCWmubD7IjEDAE1b23FEthi6uLBulmEnhwbtK6c/Fdc="
+        }
+      ]
+    },
+    {
+      "Route": "images/image_1.jpg",
+      "AssetFile": "C:\\Users\\user\\Desktop\\fashion-portfolio\\Portfolio\\wwwroot\\images\\image_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "190464"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BCWmubD7IjEDAE1b23FEthi6uLBulmEnhwbtK6c/Fdc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 21:08:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BCWmubD7IjEDAE1b23FEthi6uLBulmEnhwbtK6c/Fdc="
+        }
+      ]
+    }
+  ]
+}
