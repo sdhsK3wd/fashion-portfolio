@@ -1,95 +1,42 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+﻿'use client';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+type Illustration = {
+    id: number;
+    title: string;
+    imageUrl: string;
+};
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+export default function GalleryPage() {
+    const [illustrations, setIllustrations] = useState<Illustration[]>([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5096/api/illustrations')
+            .then((res) => res.json())
+            .then((data) => setIllustrations(data))
+            .catch((err) => console.error('API Fehler:', err));
+    }, []);
+
+    return (
+        <main className="bg-black min-h-screen px-6 py-10 text-gray-200 font-sans">
+            <h1 className="text-4xl font-bold text-purple-500 text-center mb-10 tracking-wide">Meine Looks</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                {illustrations.map((item) => (
+                    <Link key={item.id} href={`/gallery/${item.id}`}>
+                        <div className="relative group rounded-xl overflow-hidden shadow-lg bg-[#1a1a1a] cursor-pointer">
+                            <img
+                                src={item.imageUrl}
+                                alt={item.title}
+                                className="w-full h-[300px] object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h2 className="text-xl text-purple-400 font-semibold tracking-wide">{item.title}</h2>
+                            </div>
+                        </div>
+                    </Link>
+                ))}
+            </div>
+        </main>
+    );
 }
