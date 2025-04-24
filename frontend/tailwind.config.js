@@ -1,15 +1,20 @@
-﻿// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
+﻿/** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: 'class',
     content: [
-        './app/**/*.{js,ts,jsx,tsx,mdx}', // Stellt sicher, dass app/ erfasst wird
-        './pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './components/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/app/**/*.{js,ts,jsx,tsx}',
+        './src/components/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
         extend: {
-            // Hier könntest du Farben, Abstände etc. erweitern, falls nötig
+            colors: {
+                endVoid: '#000000',
+                endBase: '#1b0033',
+                endAccent: '#5b1aa0',
+                endGlow: '#9446d3',
+                endCrystal: '#cc70ff',
+            },
         },
     },
     plugins: [],
-}
+};

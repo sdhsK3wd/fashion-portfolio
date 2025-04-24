@@ -1,13 +1,15 @@
-/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Dein anderer globaler CSS-Code hier */
-body {
-  /* Der Hintergrund aus deinem Layout sollte hier oder im Body-Tag im Layout sein */
-  background-color: #0a001a;
-  color: #e2e8f0; /* Eine Standardtextfarbe, falls nicht überschrieben */
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
 }
-
-/* etc. */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+html {
+  height: 100%;
+}

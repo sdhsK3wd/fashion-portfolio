@@ -1,27 +1,26 @@
-// app/layout.tsx
-import './globals.css'; // Dein globales CSS
-import { ReactNode } from 'react';
+import './globals.css';
 import { ThemeProvider } from 'next-themes';
+import Navbar from '@/components/Navbar';
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export const metadata = {
+    title: 'FashionArt',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en" suppressHydrationWarning>
         <head>
-            {/* Font Awesome CDN Link */}
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="..." crossOrigin="anonymous" referrerPolicy="no-referrer" />
-            {/* Weitere head Elemente wie title, meta etc. */}
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            />
         </head>
-        <body className="bg-[#0a001a] text-gray-100"> {/* Oder dein Theme-Handler */}
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true}>
-            <nav className="w-full px-6 py-4 flex justify-between items-center bg-[#1a0033] shadow-md border-b border-purple-700">
-                <h1 className="text-2xl font-bold text-purple-400">FashionArt</h1>
-                <div className="flex gap-6 text-purple-200">
-                    <a href="/">Home</a>
-                    <a href="/gallery">Galerie</a>
-                    <a href="/contact">Kontakt</a>
-                </div>
-            </nav>
-            {children}
+        <body>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+            <div className="bg-endBase text-endCrystal font-sans min-h-screen">
+                <Navbar />
+                {children}
+            </div>
         </ThemeProvider>
         </body>
         </html>

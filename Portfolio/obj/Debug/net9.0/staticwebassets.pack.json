@@ -1,8 +1,20 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\user\\Desktop\\fashion-portfolio\\Portfolio\\wwwroot\\images\\image_1.jpg",
-      "PackagePath": "staticwebassets\\images\\image_1.jpg"
+      "Id": "C:\\Users\\user\\Desktop\\fashion-portfolio\\Portfolio\\wwwroot\\images\\Image_1-removebg-preview.png",
+      "PackagePath": "staticwebassets\\images\\Image_1-removebg-preview.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\fashion-portfolio\\Portfolio\\wwwroot\\images\\Image_2-removebg-preview.png",
+      "PackagePath": "staticwebassets\\images\\Image_2-removebg-preview.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\fashion-portfolio\\Portfolio\\wwwroot\\images\\Image_3-removebg-preview.png",
+      "PackagePath": "staticwebassets\\images\\Image_3-removebg-preview.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\fashion-portfolio\\Portfolio\\wwwroot\\images\\Image_4-removebg-preview.png",
+      "PackagePath": "staticwebassets\\images\\Image_4-removebg-preview.png"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Portfolio.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
