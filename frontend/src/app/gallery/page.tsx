@@ -1,10 +1,12 @@
 ﻿'use client';
+
 import { useEffect, useState } from 'react';
 
 type Illustration = {
     id: number;
     title: string;
     imageUrl: string;
+    story: string;
 };
 
 export default function GalleryPage() {
@@ -46,15 +48,25 @@ export default function GalleryPage() {
     }
 
     return (
-        <main className="bg-[#0a001a] min-h-screen px-6 pt-8 pb-10 text-gray-200 font-sans">
-            <div className="flex flex-col items-center gap-32">
+        <main className="bg-[#0a001a] min-h-screen px-6 py-10 text-gray-200 font-sans">
+            <h1 className="text-4xl font-bold text-purple-500 text-center mb-10">Meine Looks</h1>
+
+            <div className="flex flex-col items-center gap-16">
                 {illustrations.map((item) => (
-                    <div key={item.id} className="w-full max-w-md">
+                    <div
+                        key={item.id}
+                        className="relative group w-full max-w-md"
+                    >
                         <img
                             src={item.imageUrl}
-                            alt=""
-                            className="w-full h-auto mx-auto rounded-lg"
+                            alt={item.title}
+                            className="w-full h-auto object-contain rounded-lg transition-transform duration-300 group-hover:scale-105"
+                            loading="lazy"
                         />
+
+                        <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-center px-4">
+                            <p className="text-purple-200 text-sm">{item.story}</p>
+                        </div>
                     </div>
                 ))}
             </div>
