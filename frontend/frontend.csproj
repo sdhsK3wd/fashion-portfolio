@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-rc.1.24452.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="frontend\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="frontend\appsettings.json" />
+    <_ContentIncludedByDefault Remove="frontend\obj\frontend.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="frontend\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="frontend\Properties\launchSettings.json" />
+  </ItemGroup>
+
+</Project>
